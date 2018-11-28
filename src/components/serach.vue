@@ -27,6 +27,7 @@
           </div>
   </div>
         </mt-cell-swipe>
+
       </li>
     </ul>
 

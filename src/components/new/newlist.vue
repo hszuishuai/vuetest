@@ -1,7 +1,7 @@
 <template>
 	<div>
-		
-	<div class="mui-card-header mui-card-media" v-for='(item,index) in newlist' :key='index' >
+    <div class="serach-left"><span @click="$router.back()" class="glyphicon glyphicon-menu-left">返回</span></div>
+    <div class="mui-card-header mui-card-media" v-for='(item,index) in newlist' :key='index' >
 		<div class="new-img"  v-for='list in item.picInfo' :key='list.url'>
 		<router-link :to="'/home/newinfo/'+index"><img :src='list.url'></router-link>
 	</div>
@@ -11,7 +11,7 @@
 		<span>发表于{{item.ptime}} </span>
 		<span>点击次数:0次</span>
 	</p>
-	
+
 </div>
 </div>
 
@@ -28,19 +28,19 @@ export default{
         },
         created(){
         	this.axios.get('https://www.apiopen.top/journalismApi').then((response)=>{
-	
-				 this.result=(response.data.data);	
+
+				 this.result=(response.data.data);
 			     var data=[];
 				  for( var i in this.result){
 				  	for(var j=0;j<this.result[i].length;j++){
 				  		data.push(this.result[i][j]);
-	
+
 				  	}
-				  
+
 				  }
-		
+
 				  this.newlist=data;
-				
+
 				 // console.log(this.newlist);
 
         		});
@@ -48,25 +48,32 @@ export default{
 
         },
         methods:{
-        
+
         }
 
 }
-	
+
 </script>
 <style>
 .title{
 	display: flex;
 	justify-content: space-between;
 	font-size:12px;
-	color: red; 
+	color: red;
 
-	
+
 }
-	
+.serach-left{
+  position: fixed;
+  top:10px;
+  left: 5%;
+  z-index: 22;
+  color: #ffffff;
+
+}
 .new-img img{
 		width:100%;
 		height:200px;
-		margin-bottom:10px 
+		margin-bottom:10px
 	}
 </style>

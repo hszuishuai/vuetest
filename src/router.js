@@ -35,23 +35,36 @@ export default new VueRouter({
 	routes: [{
 			path: '/',
 			redirect: '/home',
-			meta: {
-				// 路由层级，数值越大层级越深，以此决定转场动画的前进和后退 大于前进，小于后退
-				index: 0,
-				showFooter: true
-			}
+
 		}, {
 			path: '/home',
-			component: home
+			component: home,
+    meta: {
+      // 路由层级，数值越大层级越深，以此决定转场动画的前进和后退 大于前进，小于后退
+      index: 0,
+      showFooter: true
+    }
 		}, {
 			path: '/member',
-			component: member
+			component: member,
+    meta: {
+      index: 0,
+      showFooter: true
+    }
 		}, {
 			path: '/serach',
-			component: serach
+			component: serach,
+    meta: {
+      index: 0,
+      showFooter: true
+    }
 		}, {
 			path: '/shopcart',
-			component: shopcart
+			component: shopcart,
+    meta: {
+      index: 0,
+      showFooter: true
+    }
 		}, {
 			path: '/home/newlist',
 			component: newlist
@@ -84,15 +97,23 @@ export default new VueRouter({
     {
       path: '/home/shopinfo/:id',
       component: shopinfo,
-      name:'shopinfo'
+      name:'shopinfo',
+      meta: {
+        index: 0,
+        showFooter: true
+      }
     },
     {
       path:'/home/shopcart/login',
       component:login,
-      name:'login'
+      name:'login',
+      meta: {
+        index: 0,
+        showFooter: true
+      }
     },
     {
-      path:'/home/shopcart/login',
+      path:'/home/shopcart/register',
       component:register,
       name:'register'
     },

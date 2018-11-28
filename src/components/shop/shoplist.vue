@@ -2,7 +2,7 @@
 
 <div id='serach-box'>
 	<div class="serach-top">
-    <div class=serach-left><span @click="back" class="glyphicon glyphicon-menu-left">返回</span></div>
+    <div class="serach-left1"><span @click="back" class="glyphicon glyphicon-menu-left">返回</span></div>
 		<input class='input-box' type="text" name="">
 		<img class="Eid" src='../../images/3.png' width="20px" height="20px">
 	</div>
@@ -78,7 +78,7 @@ a{
 .Eid{
 	 margin: 10px 10px;
 }
-.serach-left{
+#serach-box .serach-top>.serach-left1{
 	 margin-top: 10px;
   color: #ffffff;
 }

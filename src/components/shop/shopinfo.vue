@@ -57,7 +57,10 @@
           </div>
         </li>
         <!--宝贝评价-->
+        <h2>bug:better-sollor插件 刷新才生效</h2>
   </ul>
+
+
   </div>
     </div>
     <div class="shoptype" v-if="$store.state.showshop">
@@ -139,7 +142,7 @@
             }else {
               this.navBarFixed=false
             }
-            const index = tops.findIndex((top, index) => {
+           let index = tops.findIndex((top, index) => {
               // scollY>=当前top 小于下一个top
               return scollY >= top && scollY <= tops[index + 1]
             })
@@ -184,6 +187,9 @@
 </script>
 
 <style scoped="scoped">
+  h2{
+    margin-bottom: 50px;
+  }
   .color1{
     color: black;
   }
@@ -275,7 +281,7 @@
   }
   .shop-comment{
     margin-top: 10px;
-    height: 400px;
+    height: 300px;
   }
   .shoptype{
     height: 80%;

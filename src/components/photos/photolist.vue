@@ -21,7 +21,8 @@
 
 
 	<div id="slider" class="mui-slider">
-				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+    <div class="serach-left"><span @click="$router.back()" class="glyphicon glyphicon-menu-left">返回</span></div>
+    <div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
 					<div class="mui-scroll">
 						<router-link class="mui-control-item " to="/recommend" tag='li' data-wid="tab-top-subpage-1.html">
 							推荐
@@ -112,4 +113,13 @@ touch-action:pan-y;
 	top:20px;
 	left:15%;
 }
+.serach-left{
+  position: fixed;
+  top:10px;
+  left: 5%;
+  z-index: 22;
+  color: #ffffff;
+
+}
+
 </style>

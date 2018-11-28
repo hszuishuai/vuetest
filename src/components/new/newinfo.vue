@@ -1,5 +1,7 @@
 <template>
+
 	<div>
+    <div class="serach-left"><span @click="$router.back()" class="glyphicon glyphicon-menu-left">返回</span></div>
 		<p class="title">{{newinfo['title']}}</p>
 		<p>
 			<span>发表时间:{{newinfo.ptime}}</span>
@@ -58,10 +60,18 @@ export default{
 
 </script>
 
-<style>
+<style scoped>
 div{
 
 }
+.serach-left{
+  position: fixed;
+  top:10px;
+  left: 5%;
+  z-index: 22;
+  color: #ffffff;
+}
+
 .title{
 	color:red;
 	font-size:20px;

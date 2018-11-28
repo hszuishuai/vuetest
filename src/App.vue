@@ -15,7 +15,7 @@
 
 
 <!-- 底部Tabber区域 -->
-<nav class="mui-bar mui-bar-tab">
+<nav class="mui-bar mui-bar-tab" v-if="$route.meta.showFooter">
 			<router-link class="mui-tab-item-t " to="/home">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>

@@ -23,7 +23,8 @@
                 <a class="mui-navigate-right" href="#account">
                   <img class="mui-media-object mui-pull-left head-img" id="head-img" src="">
                   <div class="mui-media-body">
-                    <p class='mui-ellipsis'>登入/注册</p>
+                    <router-link to="/home/shopcart/login"><p class='mui-ellipsis'>登入/注册</p>
+                    </router-link>
                   </div>
                 </a>
               </li>
@@ -49,11 +50,6 @@
                 <a href="#about" class="mui-navigate-right">关于MUI <i class="mui-pull-right update">V3.1.0</i></a>
               </li>
             </ul>
-            <ul class="mui-table-view">
-              <li class="mui-table-view-cell" style="text-align: center;">
-                <a>退出登录</a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -70,7 +66,12 @@ export default{
 
 </script>
 <style  scoped>
-
+#user{
+  overflow: hidden;
+}
+#user>.mint-header.is-fixed{
+  z-index: 20;
+}
   .mui-views,
   .mui-view,
   .mui-pages,
@@ -85,6 +86,7 @@ export default{
     height: 100%;
     background-color: #efeff4;
   }
+
   .mui-pages {
     top: 46px;
     height: auto;
